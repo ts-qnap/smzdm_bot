@@ -10,7 +10,7 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: '0 51 * * *'
+    - cron: '0 23 * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -33,7 +33,6 @@ jobs:
       - name: Install requirements
         run: |
           pip install -r requirements.txt
-
       - name: Working
         env:
           COOKIES: ${{ secrets.SMZDM_COOKIE }}
